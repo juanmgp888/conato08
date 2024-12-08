@@ -28,7 +28,7 @@ $(document).ready(function() {
         // Si ha escrito algo, lo duplico.
         eventoClickBtn03 =function(event){
             if ($("#cajaTexto").val() ==""){    // ojo, valor no contenido 
-                $("#areaTexto").text('Hola') 
+                $("#areaTexto").text('Hola');
                 //$("#areaTexto").val('Hola')
             } else {
                 $("#areaTexto").append($("#cajaTexto").val());
@@ -37,12 +37,14 @@ $(document).ready(function() {
         }
         $("#boton03").on("click", eventoClickBtn03);
 
-        $("#contenedor06").append("<button id='boton04'>Limpiar/Reset</button>");
+        $("#contenedor07").append("<button id='boton04'>Limpiar/Reset</button>");
         eventoClickBtnLimpiar = function(event){
-            $("#areaTexto").val(''); // ¡¡ entre paréntesis !! (no con =)
-            $("#cajaTexto").val('');
+          //  $("#areaTexto").val(''); // Con campos text, textarea, div, span... se emplea .text
+          //  $("#cajaTexto").val(''); // val tiene más que ver con campos de formulario, input, select
+            $("#areaTexto").text(''); 
+            $("#cajaTexto").text('');
         }
-        $("#boton04").on("click",eventoClickBtnLimpiar)
+        $("#boton04").on("click",eventoClickBtnLimpiar);
     });
 
 });
