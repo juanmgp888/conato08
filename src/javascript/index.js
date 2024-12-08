@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     $("#boton01").on("click", function(){
-        // Mensaje notón pulsado
-     //   alert("Este botón es eliminado");
+        // Mensaje botón pulsado
+        alert("Este botón es eliminado");
 
         // Ocultar botón al ser pulsado
         $(this).hide(100);
